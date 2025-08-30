@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+:root {
+  color-scheme: light dark;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply antialiased bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100;
+}
+
+.focus-visible:focus {
+  outline: 2px solid theme('colors.brand.DEFAULT');
+  outline-offset: 2px;
+}
+
+.section {
+  @apply py-16 sm:py-24;
+}
+
+.container {
+  @apply mx-auto max-w-6xl px-4;
+}
+
+/* Global link styles for contrast and accessibility */
+a {
+  @apply text-brand underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand;
+}
+
+/* Ensure muted text still meets contrast */
+.text-muted {
+  @apply text-slate-800 dark:text-slate-200;
+}

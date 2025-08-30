@@ -1,0 +1,32 @@
+import { NavBar } from './components/NavBar'
+import { Hero } from './components/Hero'
+import { About } from './components/About'
+import { Experience } from './components/Experience'
+import { Education } from './components/Education'
+import { Skills } from './components/Skills'
+import { Services } from './components/Services'
+import { Featured } from './components/Featured'
+import { Contact } from './components/Contact'
+import { Footer } from './components/Footer'
+import { profile } from './data/profile'
+import { SEO } from './components/SEO'
+
+export default function App() {
+  return (
+    <div className="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+  <SEO title={`${profile.name} | Audiovisual Translator ES>IT`} description={profile.headline} />
+      <NavBar />
+  <main id="content" className="min-h-screen">
+        <Hero profile={profile} />
+        <About profile={profile} />
+        <Services services={profile.services} />
+        <Skills skills={profile.skills} languages={profile.languages} />
+        <Experience experiences={profile.experiences} />
+        <Education education={profile.education} />
+        <Featured posts={profile.featuredPosts} />
+        <Contact profile={profile} />
+      </main>
+      <Footer />
+    </div>
+  )
+}
