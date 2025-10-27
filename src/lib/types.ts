@@ -48,6 +48,7 @@ export type FeaturedPost = {
   description?: string
   date?: string
   link?: string
+  image?: string
 }
 
 export type Profile = {

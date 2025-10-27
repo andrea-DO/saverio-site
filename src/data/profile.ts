@@ -2,12 +2,12 @@ import { Profile } from '../lib/types'
 
 export const profile: Profile = {
   name: 'Saverio Filippelli',
-  headline: 'Traductor Audiovisual ES>IT | Subtitulación | Doblaje | Revisión | Transcripción | Localización',
+  headline: 'TRANSLATE THE WORLD',
   location: 'Seville, Andalusia, Spain',
   connections: '500+ connections',
   availability: 'Open to projects',
   about:
-    'Traductor y revisor especializado en traducción audiovisual, localización, subtitulación y doblaje, con experiencia en la gestión de equipos de traducción y comunicación intercultural. Formación sólida con Máster en Traducción Audiovisual y Licenciatura en Mediación Lingüística y Cultural. Amplio recorrido en voluntariado internacional (ESN), liderando proyectos de traducción, diseño y organización de eventos. Competente en SDL Trados, Aegisub, Subtitle Edit, Canva Pro e Illustrator. Especializado en traducción y localización audiovisual, con formación profesional adicional en SDL Trados para la gestión de proyectos de traducción y el dominio de CAT Tools.',
+    'Italiano adoptado andaluh.\n\nTraductor y revisor especializado en traducción audiovisual, localización, subtitulación y doblaje, con experiencia en la gestión de equipos de traducción y comunicación intercultural. Formación sólida con Máster en Traducción Audiovisual y Licenciatura en Mediación Lingüística y Cultural. Amplio recorrido en voluntariado internacional (ESN), liderando proyectos de traducción, diseño y organización de eventos. Competente en SDL Trados, Aegisub, Subtitle Edit, Canva Pro, WordPress e Illustrator. Especializado en traducción y localización audiovisual, con formación profesional adicional en SDL Trados para la gestión de proyectos de traducción y el dominio de CAT Tools.',
   languages: [
     { name: 'Español', proficiency: 'Native or bilingual proficiency' },
     { name: 'Italiano', proficiency: 'Native or bilingual proficiency' },
@@ -22,7 +22,7 @@ export const profile: Profile = {
   skills: [
     'Traducción audiovisual', 'Corrección de textos', 'SDL Trados', 'Aegisub', 'Subtitle Edit',
     'Localization', 'Proofreading', 'Transcription', 'Dubbing', 'Project Management', 'CAT Tools',
-    'Canva Pro', 'Adobe Illustrator', 'Social Media Management'
+    'Canva Pro', 'WordPress', 'Adobe Illustrator', 'Social Media Management'
   ],
   services: [
     'Translation (ES<>IT)', 'Audiovisual Translation', 'Subtitling', 'Dubbing & ADR scripts',
@@ -154,24 +154,25 @@ export const profile: Profile = {
   ],
   education: [
     {
-      school: 'ISTRAD - Instituto Superior de Estudios Lingüísticos y Traducción',
-      degree: 'Máster, Traducción Audiovisual: Localización, Subtitulación y Doblaje',
+      school: 'Universidad de Cádiz & ISTRAD',
+      degree: 'Máster en Traducción Audiovisual: Localización, Subtitulación y Doblaje',
       start: 'Sep 2021',
       end: 'Jul 2023',
       details: ['SDL Trados', 'Aegisub']
     },
     {
       school: 'Università per Stranieri di Siena',
-      degree: 'Bachelor’s Degree, Linguistic and Cultural Mediation - Translation for the Tourism Industry',
-      start: '2014',
-      end: '2020',
-      details: ['Thesis: "IL CASO NETFLIX" — Spanish series and losses in Italian translation of idioms & realia']
+      degree: 'Grado en Mediación Lingüística y Cultural',
+      start: 'Sep 2014',
+      end: 'Jul 2020',
+      details: ['Especialización en Traducción para la Industria Turística y Audiovisual', 'Thesis: "IL CASO NETFLIX" — Spanish series and losses in Italian translation of idioms & realia']
     },
     {
       school: 'Universidad de Castilla-La Mancha',
-      degree: 'Erasmus+ Program, Facultad de Letras',
-      start: '2017',
-      end: '2018'
+      degree: 'ERASMUS+ Program',
+      start: 'Sep 2017',
+      end: 'Jul 2018',
+      details: ['Facultad de Letras']
     },
     {
       school: 'Università degli Studi di Siena',
@@ -195,16 +196,25 @@ export const profile: Profile = {
   ],
   featuredPosts: [
     {
-      title: 'Colaboración con Zona Wrestling',
-      description: 'Traducción de artículos y análisis de shows de la WWE',
-      date: '2025',
-      link: ''
+      title: 'ZONA WRESTLING',
+      description: 'Traductor y Rehablador',
+      date: '2024-2025',
+      link: '',
+      image: '/assets/zona-wrestling.png'
     },
     {
-      title: 'Certificación DELE Nivel C1',
-      description: 'Logro personal compartido en LinkedIn',
-      date: '2021',
-      link: ''
+      title: 'NETFLIX | Bienvenidos a Edén',
+      description: 'Revision Sub ITA',
+      date: '2023',
+      link: '',
+      image: '/assets/netflix-eden.png'
+    },
+    {
+      title: 'WINEDOS | Ribera del Duero',
+      description: 'Documental - Traducción y Revisión | Sub ESP > ENG',
+      date: '2023',
+      link: '',
+      image: '/assets/winedos-ribera.png'
     }
   ]
 }
