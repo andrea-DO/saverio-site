@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 export function Badge({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full bg-indigo-100 dark:bg-indigo-900/60 px-3 py-1 text-xs font-medium text-indigo-800 dark:text-indigo-100 ring-1 ring-inset ring-indigo-600/20">
+    <span className="inline-flex items-center rounded-full bg-gradient-to-r from-brand/20 to-neon-purple/20 border border-brand/30 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm hover:scale-105 transition-transform duration-300">
       {children}
     </span>
   )

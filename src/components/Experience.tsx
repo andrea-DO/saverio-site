@@ -8,9 +8,9 @@ export function Experience({ experiences }: { experiences: ExperienceItem[] }) {
       <Timeline>
         {experiences.map((e) => (
           <TimelineItem key={`${e.company}-${e.role}-${e.start}`} title={`${e.role} · ${e.company}`} subtitle={[e.employmentType, e.location, e.remote ? 'Remote' : ''].filter(Boolean).join(' · ')} start={e.start} end={e.end}>
-            <ul className="list-disc pl-5 space-y-1 text-slate-800 dark:text-slate-200">
+            <ul className="list-disc pl-5 space-y-2 text-slate-200">
               {e.highlights?.map((h, idx) => (
-                <li key={idx}>{h}</li>
+                <li key={idx} className="leading-relaxed">{h}</li>
               ))}
             </ul>
           </TimelineItem>

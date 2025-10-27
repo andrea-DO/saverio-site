@@ -9,27 +9,40 @@ export function Featured({ posts }: { posts: FeaturedPost[] }) {
   return (
     <>
       <Section id="featured" title="Featured Projects">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((p) => (
-            <article key={p.title} className="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {posts.map((p, idx) => (
+            <article 
+              key={p.title} 
+              className="glass-card rounded-2xl overflow-hidden group hover:scale-105"
+              style={{ animationDelay: `${idx * 0.1}s` }}
+            >
               {p.image && (
                 <div 
-                  className="aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-700 cursor-zoom-in"
+                  className="aspect-video w-full overflow-hidden bg-gradient-to-br from-brand/20 to-neon-purple/20 cursor-zoom-in relative"
                   onClick={() => setModalImage({ src: p.image!, alt: p.title })}
                 >
                   <img 
                     src={p.image} 
                     alt={p.title}
-                    className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               )}
-              <div className="p-4">
-                <h3 className="text-base font-semibold text-slate-900 dark:text-white">{p.title}</h3>
-                {p.description && <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{p.description}</p>}
-                <div className="mt-3 text-xs text-slate-600 dark:text-slate-400 flex gap-2">
-                  {p.date && <span>{p.date}</span>}
-                  {p.link && <a href={p.link} className="text-brand font-medium hover:underline">View →</a>}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">{p.title}</h3>
+                {p.description && <p className="text-slate-300 leading-relaxed">{p.description}</p>}
+                <div className="mt-4 flex items-center justify-between text-sm">
+                  {p.date && <span className="text-accent-light font-medium">{p.date}</span>}
+                  {p.link && (
+                    <a 
+                      href={p.link} 
+                      className="inline-flex items-center gap-2 text-brand-light font-semibold hover:text-white transition-colors no-underline group/link"
+                    >
+                      View Project
+                      <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </article>

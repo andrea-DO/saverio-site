@@ -4,10 +4,10 @@ export function Section({ id, title, children }: { id: string; title: string; ch
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="section">
       <div className="container">
-  <h2 id={`${id}-title`} className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">
+        <h2 id={`${id}-title`} className="text-3xl sm:text-4xl font-bold tracking-tight gradient-text-cyan mb-12">
           {title}
         </h2>
-        <div className="mt-8">
+        <div className="animate-fade-in">
           {children}
         </div>
       </div>
