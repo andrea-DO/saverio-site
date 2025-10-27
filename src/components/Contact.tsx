@@ -97,6 +97,8 @@ function getSocialIcon(platform: string): string {
     'Twitter': '🐦',
     'Instagram': '📸',
     'Facebook': '👥',
+    'WhatsApp': '💬',
+    'Phone': '📞',
   }
   return icons[platform] || '🔗'
 }

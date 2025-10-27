@@ -17,7 +17,8 @@ export const profile: Profile = {
   socials: [
     { platform: 'LinkedIn', label: 'LinkedIn', url: 'https://www.linkedin.com/in/saverio-filippelli' },
     { platform: 'Email', label: 'Email', url: 'mailto:saverioaxl95@gmail.com' },
-  { platform: 'Phone', label: '+34 691 068 525', url: 'tel:+34691068525' }
+    { platform: 'WhatsApp', label: 'WhatsApp', url: 'https://wa.me/34691068525' },
+    { platform: 'Phone', label: '+34 691 068 525', url: 'tel:+34691068525' }
   ],
   skills: [
     'Traducción audiovisual', 'Corrección de textos', 'SDL Trados', 'Aegisub', 'Subtitle Edit',

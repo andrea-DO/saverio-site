@@ -8,6 +8,7 @@ import { Services } from './components/Services'
 import { Featured } from './components/Featured'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { Certifications } from './components/Certifications'
 import { profile } from './data/profile'
 import { SEO } from './components/SEO'
 
@@ -24,6 +25,7 @@ export default function App() {
         <Skills skills={profile.skills} languages={profile.languages} />
         <Experience experiences={profile.experiences} />
         <Education education={profile.education} />
+        <Certifications certifications={profile.certifications} />
         <Contact profile={profile} />
       </main>
       <Footer />

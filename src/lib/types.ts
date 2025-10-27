@@ -1,5 +1,5 @@
 export type SocialLink = {
-  platform: 'LinkedIn' | 'Email' | 'Twitter' | 'GitHub' | 'Website' | 'Phone'
+  platform: 'LinkedIn' | 'Email' | 'Twitter' | 'GitHub' | 'Website' | 'Phone' | 'WhatsApp'
   label: string
   url: string
 }

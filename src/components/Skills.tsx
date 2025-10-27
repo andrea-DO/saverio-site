@@ -1,5 +1,12 @@
 import { Section } from './Section'
 
+const skillLogos: Record<string, string> = {
+  'SDL Trados': '/assets/logos/trados.svg',
+  'Aegisub': '/assets/logos/aegisub.png',
+  'Adobe Illustrator': '/assets/logos/illustrator.svg',
+  'WordPress': '/assets/logos/wordpress.svg',
+}
+
 export function Skills({ skills, languages }: { skills: string[]; languages: { name: string; proficiency: string }[] }) {
   return (
     <Section id="skills" title="Skills & Languages">
@@ -9,6 +16,18 @@ export function Skills({ skills, languages }: { skills: string[]; languages: { n
             <span className="text-3xl">💻</span>
             Technical Skills
           </h3>
+          <div className="mb-6 flex flex-wrap gap-4 pb-6 border-b border-white/10">
+            {Object.entries(skillLogos).map(([name, logo]) => (
+              <div key={name} className="flex flex-col items-center gap-2 group">
+                <img 
+                  src={logo} 
+                  alt={name} 
+                  className="h-12 w-12 object-contain opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                />
+                <span className="text-xs text-slate-400 group-hover:text-white transition-colors">{name}</span>
+              </div>
+            ))}
+          </div>
           <ul className="flex flex-wrap gap-3">
             {skills.map((s, idx) => (
               <li 
