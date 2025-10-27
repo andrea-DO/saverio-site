@@ -19,11 +19,11 @@ export default function App() {
   <main id="content" className="min-h-screen">
         <Hero profile={profile} />
         <About profile={profile} />
+        <Featured posts={profile.featuredPosts} />
         <Services services={profile.services} />
         <Skills skills={profile.skills} languages={profile.languages} />
         <Experience experiences={profile.experiences} />
         <Education education={profile.education} />
-        <Featured posts={profile.featuredPosts} />
         <Contact profile={profile} />
       </main>
       <Footer />
