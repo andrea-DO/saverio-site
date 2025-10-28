@@ -4,6 +4,7 @@ import { Certification } from '../lib/types'
 
 const certLogos: Record<string, string> = {
   'International English Language Testing System (IELTS)': '/assets/logos/ielts.svg',
+  'DELE C1': '/assets/logos/Cervantes.png',
 }
 
 export function Certifications({ certifications }: { certifications: Certification[] }) {
@@ -17,12 +18,14 @@ export function Certifications({ certifications }: { certifications: Certificati
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
             {certLogos[cert.name] && (
-              <div className="mb-4 flex justify-center">
-                <img
-                  src={certLogos[cert.name]}
-                  alt={cert.name}
-                  className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-                />
+              <div className="mb-6 flex justify-center">
+                <div className="w-32 h-20 flex items-center justify-center">
+                  <img
+                    src={certLogos[cert.name]}
+                    alt={cert.name}
+                    className="max-h-16 max-w-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                  />
+                </div>
               </div>
             )}
             <h3 className="text-lg font-bold text-white mb-2">{cert.name}</h3>

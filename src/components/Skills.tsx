@@ -3,6 +3,7 @@ import { Section } from './Section'
 const skillLogos: Record<string, string> = {
   'SDL Trados': '/assets/logos/trados.svg',
   'Aegisub': '/assets/logos/aegisub.png',
+  'Subtitle Edit': '/assets/logos/Subtitle Edit.png',
   'Adobe Illustrator': '/assets/logos/illustrator.svg',
   'WordPress': '/assets/logos/wordpress.svg',
 }
@@ -16,15 +17,17 @@ export function Skills({ skills, languages }: { skills: string[]; languages: { n
             <span className="text-3xl">💻</span>
             Technical Skills
           </h3>
-          <div className="mb-6 flex flex-wrap gap-4 pb-6 border-b border-white/10">
+          <div className="mb-6 grid grid-cols-5 gap-6 pb-6 border-b border-white/10">
             {Object.entries(skillLogos).map(([name, logo]) => (
-              <div key={name} className="flex flex-col items-center gap-2 group">
-                <img 
-                  src={logo} 
-                  alt={name} 
-                  className="h-12 w-12 object-contain opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-                />
-                <span className="text-xs text-slate-400 group-hover:text-white transition-colors">{name}</span>
+              <div key={name} className="flex flex-col items-center gap-3 group">
+                <div className="w-16 h-16 flex items-center justify-center">
+                  <img 
+                    src={logo} 
+                    alt={name} 
+                    className="max-h-14 max-w-14 w-auto object-contain opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  />
+                </div>
+                <span className="text-xs text-slate-400 group-hover:text-white transition-colors text-center">{name}</span>
               </div>
             ))}
           </div>
